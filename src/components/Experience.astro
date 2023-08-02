@@ -1,0 +1,54 @@
+---
+interface Frontmatter {
+  title: [string];
+  company: string;
+  start: string;
+  end: string;
+  location: string;
+  bullets: [string];
+}
+const Experiences = await Astro.glob<Frontmatter>(
+  "../../data/experiences/*.md"
+);
+import DividerSecondary from './elements/DividerSecondary.astro';
+
+---
+<div class="bg-fixed" style="background-image: url('./assets/topo-lines.jpg');">
+    <!-- height: 40px;
+    width: 100%;
+    z-index: 500;
+    position: absolute;
+    transform: scaleY(-1); -->
+<DividerSecondary flip={true}/>
+
+<h1 id="exp-section" class="scroll-mt-20 text-center font-montserrat font-bold text-4xl text-highvis mt-8">
+  EXPERIENCE
+</h1>
+<hr class="my-8 w-32 border-highvis border-2 mx-auto" />
+
+{
+  Experiences.map((testimonial) => (
+    <div class="p-4">
+      <div class="flex mx-auto max-w-7xl bg-slate-50 bg-opacity-80 rounded-xl p-3 md:p-8 mb-4">
+        <div class="grow">
+          <div class="flex justify-between">
+              <p class="text-2xl text-gray-600">{testimonial.frontmatter.title}</p>
+              <p class="text-gray-600 text-sm self-center">
+                {testimonial.frontmatter.start} to {testimonial.frontmatter.end}
+              </p>
+          </div>
+          <p class=" text-highvis pt-3 mt-1 border-t border-gray-200">{testimonial.frontmatter.company}</p>
+          <ul class="list-disc ml-5 text-gray-600">
+            {testimonial.frontmatter.bullets.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div />
+    </div>
+  ))
+}
+<DividerSecondary flip={false} />
+
+</div>

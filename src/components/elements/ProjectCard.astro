@@ -1,0 +1,28 @@
+---
+interface Props {
+	icons: [string];
+	title: string;
+    pointer: string;
+	description: string;
+}
+const { title, description, icons, pointer } = Astro.props;
+---
+<div class="my-8 mx-3 md:my-0 md:mx-0 flex flex-col relative min-h-[400px] rounded-xl bg-white outline outline-1 outline-highvis outline-offset-4">
+    <div class="h-40 rounded-t-2xl bg-cover" style={`background-image: url('./assets/projects/overviews/${pointer}.jpg');`}></div>
+    <div class="grow p-4">
+        <p class="text-highvis mb-3 font-semibold text-xl">{title}</p>
+        <p class="text-gray-600">{description}</p>
+    </div>
+    <div class="m-4 flex justify-between">
+        <div class="flex">
+            {
+                icons.map((icon) => (
+                <img class="w-7 h-7 mr-2" src={`./assets/tech/${icon}.png`} alt=""></img>
+                ))
+        }
+        </div>
+        <div>
+            <a class="text-sm bg-highvis text-white rounded-xl p-2 px-3 hover:outline hover:outline-1 hover:outline-highvis hover:outline-offset-4" href=`${pointer}.html`>Learn more</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+---
+interface Props {
+	title: string;
+    description: string;
+    bullets: [string];
+    icons: [string];
+}
+const { title, description, bullets, icons} = Astro.props;
+---
+<div class="lg:grid lg:grid-cols-3 lg:gap-4 mx-auto max-w-7xl my-8 p-4">
+    <div class="col-span-2">
+        <h1 class="text-highvis font-montserrat text-3xl font-semibold mb-4">{title}</h1>
+        <p class="text-xl text-gray-600 pb-8">{description}</p>
+    </div>
+    <div class="row-span-1 border border-highvis p-8 rounded-xl">
+        <p class="text-center font-semibold text-highvis text-lg">KEY FEATURES</p>
+
+        <ul class="list-disc ml-5 text-gray-600">
+            {bullets.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+
+        <p class="text-center font-semibold text-highvis text-lg my-6">TECH USED</p>
+
+       <div class="flex justify-center">
+        {
+            icons.map((icon) => (
+            <img class="w-16 h-16 mx-4" src={`./assets/tech/${icon}.png`} alt=""></img>
+            ))
+    }
+       </div>
+
+    </div>
+</div>

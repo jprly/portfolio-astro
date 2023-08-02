@@ -1,0 +1,69 @@
+---
+import DividerSecondary from './elements/DividerSecondary.astro';
+const year =  new Date().getFullYear();
+---
+<div class="bg-slate-900">
+  <DividerSecondary flip={true} />
+
+<div class="mx-auto max-w-7xl p-8">
+
+  <h1 id="contact-section" class="scroll-mt-20 text-center font-montserrat font-bold text-4xl text-highvis mb-24">
+    CONTACT
+  </h1>
+  <div class="md:flex">
+    <div class="flex-1">
+      <div class="flex">
+        <img class="w-28 h-28 rounded mr-8 md:mr-0" src="./assets/Riley-35.jpg" />
+        <div class="font-montserrat text-slate-100 md:ml-8 mb-8 md:mb-0">
+          <p class="font-bold">Jon Riley</p>
+          <p>404.909.4399</p>
+          <p>jprly@outlook.com</p>
+          <div class="flex">
+            <a href="https://www.credly.com/badges/cfb1122c-6222-4c92-9dca-106035b1b4e6/public_url">
+              <img class="w-20 my-3" src="./assets/aws-certified-cloud-practitioner.png" alt="">
+            </a>
+
+          </div>
+          <p class="font-bold">Connect</p>
+          <p><a class="hover:text-highvis" href="https://www.linkedin.com/in/jonathan-riley-28583668/">LinkedIn</a> | <a class="hover:text-highvis" href="https://github.com/jprly">GitHub</a></p>
+
+        </div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <form
+        class="flex flex-col text-white"
+        id="contact-form"
+        method="POST"
+        data-netlify="true"
+        name="contact"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input
+          class="rounded-2xl p-3 mb-6 bg-slate-900 border-highvis border"
+          type="text"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          class="rounded-2xl p-3 mb-6 bg-slate-900 border-highvis border"
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <textarea
+          class="rounded-2xl p-3 mb-6 bg-slate-900 border-highvis border"
+          name="message"
+          placeholder="Message"></textarea>
+        <button
+          type="submit"
+          class="rounded-2xl p-3 mb-6 text-white bg-highvis hover:outline hover:outline-1 hover:outline-highvis hover:outline-offset-4"
+          >Send Message</button
+        >
+      </form>
+    </div>
+  </div>
+  <p class="text-white font-light mb-4">All rights reserved © Jon Riley {year}</p>
+
+</div>
+</div>

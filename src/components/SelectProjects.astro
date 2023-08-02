@@ -1,0 +1,19 @@
+---
+const projects = await Astro.glob('../../data/projects/*.md');
+
+import ProjectCard from './elements/ProjectCard.astro'
+---
+<h1 id="projects-section" class="scroll-mt-20 text-center font-montserrat font-bold text-4xl text-highvis mt-14">SELECT PROJECTS</h1>
+<hr class="my-8 w-32 border-highvis border-2 mx-auto">
+<div class="md:grid md:grid-cols-3 md:gap-10 max-w-7xl mx-auto mb-24 px-4">
+{
+        projects.map((project) => (
+        <ProjectCard 
+                title={project.frontmatter.title} 
+                pointer={project.frontmatter.pointer} 
+                description={project.frontmatter.description} 
+                icons={project.frontmatter.icons} />
+        ))
+}
+
+</div>

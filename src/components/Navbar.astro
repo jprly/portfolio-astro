@@ -1,0 +1,187 @@
+---
+---
+
+<nav class="bg-slate-900 w-full fixed z-50">
+  <div
+    class="flex max-w-5xl mx-auto h-20 items-center text-slate-400 font-montserrat"
+  >
+    <div class="grow align-middle flex-none text-3xl font-bold text-slate-200">
+      <span class="text-highvis">JON_</span>RILEY
+    </div>
+    <div class="md:flex font-semibold hidden">
+      <a class="p-4 hover:text-highvis" href="/#about-section">ABOUT</a>
+      <a class="p-4 hover:text-highvis" href="/#tech-section">TECH</a>
+      <a class="p-4 hover:text-highvis" href="/#exp-section">EXPERIENCE</a>
+      <a class="p-4 hover:text-highvis" href="/#projects-section">PROJECTS</a>
+      <a class="p-4 hover:text-highvis" href="/#contact-section">CONTACT</a>
+    </div>
+    <!-- burger menu -->
+    
+
+    <div id="burger-button" class="md:hidden">
+      <svg
+        width="40px"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 173.2 173.2"
+      >
+        <defs> </defs>
+        <rect
+          fill="white"
+          x="30.35"
+          y="56.05"
+          width="112.5"
+          height="10.43"
+          rx="4.96"></rect>
+        <rect
+          fill="white"
+          x="30.35"
+          y="81.38"
+          width="112.5"
+          height="10.43"
+          rx="4.96"></rect>
+        <rect
+          fill="white"
+          x="30.35"
+          y="106.72"
+          width="112.5"
+          height="10.43"
+          rx="4.96"></rect>
+        <path
+          fill="#ff5515"
+          class="cls-1"
+          d="M87.84,174.16a86.6,86.6,0,1,1,86.6-86.6A86.69,86.69,0,0,1,87.84,174.16Zm0-166.89a80.3,80.3,0,1,0,80.3,80.29A80.38,80.38,0,0,0,87.84,7.27Z"
+          transform="translate(-1.25 -0.96)"></path>
+      </svg>
+    </div>
+    <!-- end burger menu -->
+  </div>
+</nav>
+<ul id="burger-menu" class="menu z-40">
+  <li>
+    <a
+      href="/#about-section"
+      class="menuItem section-navigator"
+      data-section="about-section">ABOUT</a
+    >
+  </li>
+  <li>
+    <a
+      href="/#tech-section"
+      class="menuItem section-navigator"
+      data-section="tech-section">TECH</a
+    >
+  </li>
+  <li>
+    <a
+      href="/#exp-section"
+      class="menuItem section-navigator"
+      data-section="exp-sectio">EXPERIENCE</a
+    >
+  </li>
+  <li>
+    <a
+      href="/#projects-section"
+      class="menuItem section-navigator"
+      data-section="projects-sectio">PROJECTS</a
+    >
+  </li>
+  <li>
+    <a href="/#contact-section" class="menuItem section-navigator"
+      >CONTACT</a
+    >
+  </li>
+</ul>
+<!-- <div class="nav-bar" style="    z-index: 500;">
+    <div class="max-width">
+
+</div>
+</div> -->
+
+<style>
+  #burger-button {
+    columns: white;
+    /* display: none; */
+    cursor: pointer;
+  }
+  #burger-menu li {
+    margin-bottom: 5rem;
+  }
+  @media only screen and (max-width: 685px) {
+    #burger-button {
+      color: white;
+      display: block;
+      padding-right: 1rem;
+    }
+    .nav-links {
+      display: none;
+    }
+    #hero-text {
+      font-size: 3rem;
+    }
+  }
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background: rgb(247, 230, 217);
+    color: 21222a;
+    list-style: none;
+    padding-top: 76px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: space-between; */
+    text-align: center;
+  }
+  .menuItem {
+    padding: 1rem;
+    color: #b8bac7;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #21222a;
+    cursor: pointer;
+  }
+  .showMenu {
+    transform: translateY(0);
+  }
+</style>
+<script>
+  const burgerButton = document.querySelector("#burger-button");
+  const burgerMenu = document.querySelector("#burger-menu");
+  const navLinks = document.querySelectorAll(".section-navigator");
+
+  let burgerMenuVisible = false;
+
+  navLinks.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      burgerMenu?.classList.remove("showMenu");
+      burgerMenuVisible = false;
+      const targetSection = document.getElementById(e.target.dataset.section);
+      targetSection?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    });
+  });
+
+  burgerButton?.addEventListener("click", () => {
+    console.log("burger menu clicked");
+
+    if (burgerMenuVisible) {
+      burgerMenu?.classList.remove("showMenu");
+      burgerMenuVisible = false;
+    } else {
+      burgerMenu?.classList.add("showMenu");
+      burgerMenuVisible = true;
+    }
+  });
+</script>

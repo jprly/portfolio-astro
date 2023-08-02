@@ -1,0 +1,26 @@
+---
+import Compass from './elements/Compass.astro';
+import DividerSecondary from './elements/DividerSecondary.astro';
+
+---
+<div class=" bg-cover bg-fixed" style="background-image: url('./assets/header-bg3.jpg');">
+<div class="flex pt-20 items-center h-screen bg-no-repeat bg-cover text-white" >
+  <div class="md:flex max-w-5xl mx-auto">
+    <Compass />
+    
+    <!-- hero copy -->
+    <div class="grow">
+      <h1 class="font-montserrat font-bold text-5xl md:text-7xl text-center md:text-left">HIKING TRAILS AND HACKING <span class="text-highvis">CODE</span>.</h1>
+      <h2 class="text-2xl md:text-3xl text-center md:text-left">I enjoy squashing bugs on the trail and before PROD</h2>
+      <hr class="my-8 w-32 border-highvis border-2 mx-auto md:mx-0">
+      <div class="md:flex font-semibold text-center  md:justify-start">
+        <a class="duration-100 block mx-auto md:mx-0 md:inline bg-highvis p-4 w-48  rounded-2xl hover:text-highvis hover:bg-white hover:shadow-2xl hover:outline hover:outline-1 hover:outline-highvis hover:outline-offset-4" href="/#projects-section">Projects</a>
+        <a class="duration-100 block mx-auto mt-2 md:mt-0 md:inline bg-white hover:bg-highvis hover:text-white text-highvis p-4 w-48 rounded-2xl md:mx-3 hover:outline hover:outline-1 hover:outline-highvis hover:outline-offset-4" href="/#contact-section">Contact</a>
+      </div>
+    </div>
+    </div>
+
+</div>
+<DividerSecondary flip={false} />
+
+</div>

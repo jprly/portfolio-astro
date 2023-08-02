@@ -1,0 +1,25 @@
+---
+const Testimonials = await Astro.glob('../../data/testimonials/*.md');
+
+---
+<h1 class="text-center font-montserrat font-bold text-4xl text-highvis">WHAT OTHERS SAY</h1>
+<hr class="my-8 w-32 border-highvis border-2 mx-auto">
+
+{
+    Testimonials.map((testimonial) => (
+    <div class="p-2">
+    <div class="flex mx-auto max-w-7xl bg-slate-50 rounded-xl p-3 md:p-8 mb-8">
+        <div class="mr-2 md:mr-4 basis-1/12">
+            <img src={`./assets/testimonials/${testimonial.frontmatter.first}.jpg`} class="min-w-0 rounded-full shadow-xl" alt=""></img>
+        </div>
+        <div class="basis-11/12">
+            <p class="font-semibold">{testimonial.frontmatter.first} {testimonial.frontmatter.last}</p>
+            <p class="italic mb-3">{testimonial.frontmatter.title}</p>
+            <p class="text-gray-600">{testimonial.frontmatter.testimonial}</p>
+        </div>
+    </div>
+    <div>
+    </div>
+</div>
+    ))
+}

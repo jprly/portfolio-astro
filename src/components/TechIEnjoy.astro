@@ -1,0 +1,61 @@
+---
+const TechIcons = ["datadog", "aws", "terraform", "vue", "react", "typescript", "firebase"]
+---
+<h1 id="tech-section" class="scroll-mt-20 text-center font-montserrat font-bold text-4xl text-highvis mt-14">TECH I ENJOY</h1>
+<hr class="my-8 w-32 border-highvis border-2 mx-auto">
+<div id="firstobserver" class="grid grid-cols-7 gap-4 max-w-7xl mx-auto mb-8">
+
+    {
+        TechIcons.map((icon) => (
+        <div class="flex justify-center">
+        <img id="aicon" class="max-h-16 duration-300" src={`./assets/tech/${icon}.png`} alt=""></img>
+    </div>
+
+        ))
+
+}
+
+</div>
+<div class="flex max-w-5xl mx-auto mb-8">
+    <div class="grow">
+        <p class="font-semibold">Language</p>
+        <ul class="list-disc ml-5 text-gray-600">
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+    </div>
+    <div class="grow">
+        <p class="font-semibold">SRE</p>
+        <ul class="list-disc ml-5 text-gray-600">
+            <li>AWS</li>
+            <li>CloudWatch</li>
+            <li>DataDog</li>
+            <li>SonarQube</li>
+            <li>PagerDuty</li>
+        </ul>
+    </div>
+    <div class="grow">
+        <p class="font-semibold">Testing</p>
+        <ul class="list-disc ml-5 text-gray-600">
+            <li>Selenium</li>
+            <li>Postman</li>
+            <li>Testing Libraries</li>
+        </ul>
+    </div>
+    <div class="grow">
+        <p class="font-semibold">Frameworks</p>
+        <ul class="list-disc ml-5 text-gray-600">
+            <li>React</li>
+            <li>Vue</li>
+        </ul>
+    </div>
+    <div class="grow">
+        <p class="font-semibold">CI/CD</p>
+        <ul class="list-disc ml-5 text-gray-600">
+            <li>GitHub Actions</li>
+            <li>GoCD</li>
+            <li>HCL/Terraform</li>
+        </ul>
+    </div>
+</div>

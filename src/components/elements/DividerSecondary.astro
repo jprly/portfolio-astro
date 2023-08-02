@@ -1,0 +1,13 @@
+---
+interface Props {
+	flip: boolean
+}
+const { flip } = Astro.props;
+---
+<div>
+    <svg class=`relative bottom-0 ${flip ? '-scale-y-100': 'scale-y-100'} left-0` version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 60"
+    style="enable-background: new 0 0 1920 60" xml:space="preserve">
+    <polygon fill="white" points="1920,62.6 1920,20.9 1832.8,32.6 1753.4,20.9 1493.1,41.8 1246,32.6 1019.6,41.8 929.9,53.2 
+  693.1,20.9 529.9,48.8 457.7,20.9 382.8,41.8 201.9,53.2 72.5,32.6 0,20.9 0,62.6 " />
+  </div>
