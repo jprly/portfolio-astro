@@ -10,11 +10,10 @@ const ecs = await Astro.glob('../../data/projects/07_todo.md');
 
 <Layout title="Jon Riley - Software Engineer">
 <ProjectHeader>
-    <img class="max-w-3xl" src="../assets/projects/gocd.png" style="width: 100%" alt="">
+    <img class="max-w-sm" src="../assets/projects/todo.png" style="width: 100%" alt="">
 </ProjectHeader>
 <div class="md:flex max-w-7xl mx-auto justify-center">
-    <Button text="View Terraform" url='https://github.com/jprly/gocd-terraform' />
-    <Button text="View Pipeline as Code" url='https://github.com/jprly/pipeline-demo/blob/main/react.pipeline.gocd.yaml' />
+    <Button text="View Repo" url='https://github.com/jprly/todo21' />
 </div>
 <ProjectCopy title={ecs[0].frontmatter.title} description={ecs[0].frontmatter.description} bullets={ecs[0].frontmatter.bullets} icons={ecs[0].frontmatter.icons} />
 </Layout>
