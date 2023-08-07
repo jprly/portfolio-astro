@@ -8,7 +8,7 @@ const Testimonials = await Astro.glob('../../data/testimonials/*.md');
 {
     Testimonials.map((testimonial) => (
     <div class="p-2">
-    <div class="flex mx-auto max-w-7xl bg-slate-50 rounded-xl p-3 md:p-8 mb-8">
+    <div class="flex mx-auto max-w-7xl bg-slate-50 rounded-xl p-3 md:p-8 mb-8 outline outline-1 outline-slate-200 outline-offset-4">
         <div class="mr-2 md:mr-4 basis-1/12">
             <img src={`./assets/testimonials/${testimonial.frontmatter.first}.jpg`} class="min-w-0 rounded-full shadow-xl" alt=""></img>
         </div>
