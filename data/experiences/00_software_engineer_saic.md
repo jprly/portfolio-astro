@@ -1,7 +1,7 @@
 ---
 title: Software Engineer
 company: SAIC
-start: 01/23
+start: 10/23
 end: Present
 location: Remote
 bullets: [
