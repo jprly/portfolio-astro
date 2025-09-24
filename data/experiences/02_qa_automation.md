@@ -3,11 +3,11 @@ title: QA Automation Engineer
 company: Built Technologies
 start: 12/21
 end: 12/22
-location: Hybrid
+location: Hybrid / Nashville, TN
 bullets: [
-    "Automated testing with CI/CD pipeline, including selenium browser and API integration tests",
-    "Built a unified end to end (selenium) testing repository for Built’s micro service architecture",
-    "Managed and led QA/automation sessions for engineering new hire onboarding",
-    "Experience: WebdriverIO Framework(Selenium), React testing library, Gherkin Syntax, Postman/Newman",
+"Automated end-to-end test pipelines with WebdriverIO, reducing manual QA cycles and increasing coverage",
+"Unified microservice testing frameworks, standardizing QA practices across teams",
+"Delivered training sessions for new engineers, accelerating onboarding and improving adoption of automation tools",
+"Experience: Selenium, React Testing Library, WebdriverIO, Gherkin, Postman/Newman",
 ]
 ---
