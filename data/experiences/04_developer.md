@@ -5,9 +5,9 @@ start: 12/19
 end: 03/23
 location: Remote
 bullets: [
-    "Developed SaaS product from concept to completion",
-    "Grew to 250 subscribers generating over 33,000 entries of customizable feedback for ESL teachers",
-    "Implemented new features based on growth and user feedback",
-    "Migrated application from WordPress to JavaScript frontend and Firebase backend to allow for increased capacity and efficiency in development"
+  "Built and launched a SaaS platform from concept to production, serving ESL teachers with customizable feedback tools",
+  "Scaled the product to 250+ paying subscribers who generated over 33,000 pieces of feedback, demonstrating product-market fit and sustained engagement",
+  "Prioritized and delivered new features based on user feedback, improving retention and expanding platform capabilities",
+  "Migrated the application from WordPress to a modern JavaScript frontend with a Firebase backend, improving scalability, performance, and development efficiency"
 ]
 ---
